@@ -1,4 +1,4 @@
-import '@tensorflow/tfjs-node-gpu';
+import '@tensorflow/tfjs-node';
 import * as faceapi from 'face-api.js';
 
 import {
