@@ -1,4 +1,4 @@
-import '@tensorflow/tfjs-node';
+import '@tensorflow/tfjs-node-gpu';
 import * as faceapi from 'face-api.js';
 
 import {
@@ -14,8 +14,8 @@ async function run() {
   const img = await canvas.loadImage('./images/faces.jpg');
   const detections = await faceapi.detectAllFaces(img, faceDetectionOptions);
 
-  console.log(1);
-  
+  console.log(detections);
+
   const out = faceapi.createCanvasFromMedia(img) as any;
   faceapi.draw.drawDetections(out, detections);
 
